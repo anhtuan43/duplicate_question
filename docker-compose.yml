@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile.backend
     ports:
-      - "8000:8000"
+      - "9098:8000"  # map host port 9098 → container port 8000
     volumes:
       - ./backend:/app
     restart: unless-stopped
@@ -16,8 +16,8 @@ services:
       context: .
       dockerfile: Dockerfile.frontend
     ports:
-      - "5173:5173"
+      - "9099:5173"  # map host port 9099 → Vite dev server port 5173
     volumes:
       - ./app:/app
     restart: unless-stopped
-    command: ["npm", "run", "dev", "--", "--host"]
+    command: ["npm", "run", "dev", "--", "--host", "--port", "5173"]
