@@ -1,0 +1,11 @@
+# Dockerfile.frontend
+FROM node:20
+
+WORKDIR /app
+
+COPY app/ .
+
+RUN npm install
+
+# Chạy dev server Vite ở cổng 5173
+CMD ["npm", "run", "dev", "--", "--host"]

@@ -1,0 +1,11 @@
+{
+  "1e48ca55ed2f657dce07973bffaf5a17": {
+    "created_at": "2025-06-17T06:21:44.179902",
+    "file_path": "cache/embeddings_1e48ca55ed2f657dce07973bffaf5a17.pkl",
+    "shape": [
+      500,
+      1024
+    ],
+    "access_count": 1
+  }
+}
